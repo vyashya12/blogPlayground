@@ -1,0 +1,46 @@
+What are these keywords or their use/differences
+-module.exports
+    -By default anything that you want to use in another file is encapsulated and you have to conciously tell
+    Node.JS that you want to use it in another file with module.exports
+-require
+    -Pass it to a variable so that it holds the return of the require, for example it may hold a function, a model,
+    a file anything a module. Require the entire file
+-import
+    -Import is used to import file that is exported in another file. Import is specific to save space
+-exports
+    -module.exports = add;
+    let addFn = require('./add.js')
+    and if you use the add function should work
+    But if its
+    exports = add;
+    It wont work because you are givinng an alias to the keyword exports which doesnt contain anything
+
+Things to know about React
+What is a:
+    -State
+        -State is a plain JavaScript object used by React to represent an information about the component’s
+         current situation. State is not used directly, setState is used. SetSTate is a request rather an immediate
+         command to update. SetSTate is asychronous 
+    -Components
+        -Components are small pieces that make up your application in React. You can see a UI broken down into multiple
+         individual pieces called components and work on them independently and merge them all in a parent component
+         which will be your final UI.
+         -Two types of components, for example functional components and class components
+    -Functional Component/ Class Component
+        -We can create a functional component in React by writing a javascript function. These functions may or may not
+         receive data as parameters.
+        -The functional components are not aware of the other components in your program whereas the class components can 
+         work with each other. We can pass data from one class component to other class components
+    -JSX
+        -JSX stands for JavaScript XML. It is simply a syntax extension of JavaScript. It allows us to directly write 
+         HTML in React (within JavaScript code). It is easy to create a template using JSX in React, but it is not a 
+         simple template language instead it comes with the full power of JavaScript.
+    -Babel
+        -Babel is a JavaScript compiler that includes the ability to compile JSX into regular JavaScript You're going to 
+         install babel-core slightly differently than you installed react and react-dom. Instead of npm install --save babel-core , 
+         you will use the command npm install --save-dev babel-core.
+        -In my understanding Babel is converting new syntax into old syntax
+    -Webpack
+        -Webpack is a static module bundler for JavaScript applications. This enables you to take a fully dynamic application 
+         and package it into static files, which you can then upload and deploy to your server
+        -Another package for module bundling 
